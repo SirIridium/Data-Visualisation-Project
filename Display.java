@@ -2,7 +2,7 @@
 public class Display /*extends scene*/{
     private static final int YEAR = 2024;
     private int yearsToGoBack; 
-
+    
     //constructor
     public Display(int yearsToGoBack){
         this.yearsToGoBack = yearsToGoBack;
