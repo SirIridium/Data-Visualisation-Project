@@ -6,14 +6,14 @@ public class Temp extends Display {
 
 
     //the tons array will be made with the text file of all the tons.
-    public Temp(int yearsToGoBack, double[] temp){
-        super(yearsToGoBack);
+    public Temp(int daysToGoBack, double[] temp){
+        super(daysToGoBack);
         this.temp = temp;
     }
 
     public double[] createTemp(){
-        double[] temps = new double[100]; 
-        
+        double[] temps = new double[/*fgure this out */100]; 
+
         return temps; 
     }
 
