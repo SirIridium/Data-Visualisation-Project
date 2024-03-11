@@ -8,19 +8,20 @@ public class DataRunner {
         //we are doing the project on the tons of CO2 in the atmosphere per year over the past 100 year
         
         Scanner userChoice = new Scanner(System.in);
-
+        
         /* we are going to be using the user choice
          * This is going to check what the user is picking for their graph / years they want to see
          * We are going to build the conditionals as a debugging structure, 
          * however we need to decide what we are doing for the project.
          */
-        System.out.println("Please state what ({year} or {graph}) you would like to see:"); 
+        System.out.println("Please state what ({year} or {graph}) you would like to see: "); 
+        //could be int
         String choice = userChoice.nextLine();
         
-        if(choice.equals("Yes")){
-            System.out.println("yes");
+        if(choice.equals("Ping") || choice.equals("ping")){
+            System.out.println("pong");
         }
-
+        
 
 
         userChoice.close();
