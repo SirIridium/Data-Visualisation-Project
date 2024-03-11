@@ -1,4 +1,5 @@
-public class Display {
+//remember that this extends the scene. 
+public class Display /*extends scene*/{
     private static final int YEAR = 2024;
     private int yearsToGoBack; 
 
@@ -11,5 +12,6 @@ public class Display {
     public int getYearsToGoBack(){
         return yearsToGoBack; 
     }
+
 
 }
