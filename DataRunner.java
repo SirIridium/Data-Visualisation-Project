@@ -1,5 +1,5 @@
 //import org.code.theater.*;
-import java.util.*;
+import java.util.Scanner;
 public class DataRunner {
     public static void main(String[] args){
         //Where all the running will happen
@@ -23,7 +23,7 @@ public class DataRunner {
             //whatever(choice);
             }
 
-        }
+        
 
         if(choice.equals("Ice")){
             System.out.println("How many years would you like to go back?");
@@ -31,12 +31,15 @@ public class DataRunner {
             //whatever(choice);
             }
 
-        }
         
-       
 
+        if(choice.equals("Temp")){
+            System.out.println("How many years would you like to go back?");
+            userChoice.nextInt();
+            //whatever(choice);
+            }
 
         userChoice.close();
-    }
+        }
+    
 }
- 
