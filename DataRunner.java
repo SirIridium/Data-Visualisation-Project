@@ -31,14 +31,8 @@ public class DataRunner {
             //whatever(choice);
             }
 
-        
-       
-        if(choice.equals("Ping") || choice.equals("ping")){
-            System.out.println("pong");
-        }
-        
 
-
+        //closes the scanner
         userChoice.close();
     }
 }
