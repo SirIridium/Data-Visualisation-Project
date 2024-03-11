@@ -13,7 +13,7 @@ public class DataRunner {
          * We are going to build the conditionals as a debugging structure, 
          * however we need to decide what we are doing for the project.
          */
-        System.out.println("Please state which graph you would like to see: CO2, Ice, Temp"); 
+        System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
         String choice = userChoice.nextLine();
         
         
@@ -25,7 +25,7 @@ public class DataRunner {
 
         
 
-        if(choice.equals("Ice")){
+        if(choice.equals("Rain")){
             System.out.println("How many years would you like to go back?");
             userChoice.nextInt();
             //whatever(choice);
