@@ -14,7 +14,7 @@ public class Temp {
     }
     
 
-    /* THIS WORKS IN CODE.ORG */
+    /* THIS WORKS IN CODE.ORG */ //YO THIS A COPY OF BRAND FROM LESSON 10 P6 :angry: !!!111!1!11!1
     public static Temp[] createTemp(String tempHighFile, String tempLowFile){
           double[] tempHigh= FileReader.toDoubleArray(tempHighFile);
           double[] tempLow = FileReader.toDoubleArray(tempLowFile);
