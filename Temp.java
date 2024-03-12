@@ -1,35 +1,35 @@
+import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Temp extends Display {
-    //co2 emission per day per area
-    //temperature per day per area
-    //this is the class that will represent the COTwo per year
+    @SuppressWarnings("unused")
     private int daysToGoBack;
-    private double[] temp = new double[daysToGoBack];
+    @SuppressWarnings("unused")
+    private double[] temp;
 
-    //the tons array will be made with the text file of all the tons.
-    public Temp(int daysToGoBack, double[] temp){
+    public Temp(int daysToGoBack, double[] temp) {
         super(daysToGoBack);
-        this.createTemp()
+        this.daysToGoBack = daysToGoBack;
+        this.temp = temp;
     }
 
-    public static double[] createTemp(){
-          double[] tempData = FileReader.toDoubleArray("Temperatures.txt"); //amongus
-        return tempData; 
-    }
+    public static double[] createTemp(String tempFile) {
+        try {
+            String[] tempData = FileReader.toStringArray(tempFile);
+            double[] tempArray = new double[tempData.length];
 
+            for (int i = 0; i < tempData.length; i++) {
+                tempArray[i] = Double.parseDouble(tempData[i]);
+            }
+
+            return tempArray;
+        } catch (IOException e) {
+            // Handle file reading exception
+            e.printStackTrace();
+            return null; // or throw an exception
+        }
+    }
 }
-
-
-/* 
-public static Brand[] createBrands(String namesFile, String gendersFile) {
-    String[] namesData = FileReader.toStringArray(namesFile);
-    String[] gendersData = FileReader.toStringArray(gendersFile);
-    Brand[] brandsData = new Brand[namesData.length];
-
-    for (int index = 0; index < brandsData.length; index++) {
-      brandsData[index] = new Brand(namesData[index], gendersData[index]);
-    }
-
-    return brandsData;
-    */
