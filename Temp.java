@@ -1,35 +1,43 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+//import java.io.FileReader;
 
-public class Temp extends Display {
-    @SuppressWarnings("unused")
-    private int daysToGoBack;
-    @SuppressWarnings("unused")
-    private double[] temp;
+public class Temp {
+    //co2 emission per day per area
+    //temperature per day per area
+    //this is the class that will represent the temp per year
+    private double high;
+    private double low; 
 
-    public Temp(int daysToGoBack, double[] temp) {
-        super(daysToGoBack);
-        this.daysToGoBack = daysToGoBack;
-        this.temp = temp;
+    //the temp array will be made with the text file of all the tons.
+    public Temp(double high, double low){
+      this.high = high;
+      this.low = low; 
     }
+    
 
-    public static double[] createTemp(String tempFile) {
-        try {
-            String[] tempData = FileReader.toStringArray(tempFile);
-            double[] tempArray = new double[tempData.length];
+    /* THIS WORKS IN CODE.ORG */
+    public static Temp[] createTemp(String tempHighFile, String tempLowFile){
+          double[] tempHigh= FileReader.toDoubleArray(tempHighFile);
+          double[] tempLow = FileReader.toDoubleArray(tempLowFile);
+          Temp[] dataSet = new Temp[tempHigh.length]; 
+      
+          for(int i = 0; i<tempHigh.length; i++){
+            dataSet[i] = new Temp(tempHigh[i], tempLow[i]); 
+          }
 
-            for (int i = 0; i < tempData.length; i++) {
-                tempArray[i] = Double.parseDouble(tempData[i]);
-            }
-
-            return tempArray;
-        } catch (IOException e) {
-            // Handle file reading exception
-            e.printStackTrace();
-            return null; // or throw an exception
-        }
-    }
+        return dataSet;
+  }
 }
+
+
+/* 
+public static Brand[] createBrands(String namesFile, String gendersFile) {
+    String[] namesData = FileReader.toStringArray(namesFile);
+    String[] gendersData = FileReader.toStringArray(gendersFile);
+    Brand[] brandsData = new Brand[namesData.length];
+
+    for (int index = 0; index < brandsData.length; index++) {
+      brandsData[index] = new Brand(namesData[index], gendersData[index]);
+    }
+
+    return brandsData;
+    */
