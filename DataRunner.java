@@ -8,7 +8,7 @@ public class DataRunner {
         //we are doing the project on the tons of CO2 in the atmosphere per year over the past 100 year
         
         Scanner userChoice = new Scanner(System.in);
-
+        
         /* we are going to be using the user choice
          * This is going to check what the user is picking for their graph / years they want to see
          * We are going to build the conditionals as a debugging structure, 
