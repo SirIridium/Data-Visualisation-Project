@@ -23,7 +23,38 @@ public class Temp {
           }
         return dataSet;
   }
+
+    /* getter methods
+     * will be used to return a graph 
+     */
+    public double getHighTemp(){
+        return high; 
+    }
+    public double getLowTemp(){
+        return low; 
+    }
+
+  /* This is something I am building by myself
+   * It should return a 2d array holding the high and low temps of the days
+   * and it should be as long as the temps data is long. 
+   */
+  public static double[][] printTemps(Temp[] data){
+
+    double[][] tempsGraph = new double[data.length][2];
+
+    for(int i = 0; i < data.length; i++){
+        for(int low = 0; low <= 1; low ++){
+            if(low==0)
+                tempsGraph[i][0] = data[i].getHighTemp();
+            else{
+                tempsGraph[i][1] = data[i].getLowTemp(); 
+            }
+        }
+    }
+    return tempsGraph; 
+  }
 }
+
 
 
 /* 
