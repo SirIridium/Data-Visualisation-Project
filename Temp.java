@@ -38,7 +38,7 @@ public class Temp {
    * It should return a 2d array holding the high and low temps of the days
    * and it should be as long as the temps data is long. 
    */
-  public static double[][] printTemps(Temp[] data){
+  public static String printTemps(Temp[] data){
 
     double[][] tempsGraph = new double[data.length][2];
 
@@ -51,8 +51,20 @@ public class Temp {
             }
         }
     }
-    return tempsGraph; 
+    return tempsToString(tempsGraph); 
   }
+
+    public static String tempsToString(double[][] tempsGraph2){
+        String result = ""; 
+        for(int row = 0; row < tempsGraph2.length; row++){
+          result += "Day " + (row+1) + " ";
+            for(int col=0; col <= 1; col++){
+                result+= " | " + tempsGraph2[row][col] +" | ";
+            }
+            result += "\n";
+        }
+        return result;
+    }
 }
 
 
