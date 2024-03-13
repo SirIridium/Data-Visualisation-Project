@@ -3,7 +3,7 @@
 public class Temp {
     //co2 emission per day per area
     //temperature per day per area
-    //this is the cslass that will represent the temp per year
+    //this is the class that will represent the temp per year
     private double high;
     private double low; 
 
