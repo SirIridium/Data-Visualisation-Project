@@ -3,7 +3,7 @@
 public class Temp {
     //co2 emission per day per area
     //temperature per day per area
-    //this is the class that will represent the temp per year
+    //this is the cslass that will represent the temp per year
     private double high;
     private double low; 
 
@@ -12,14 +12,7 @@ public class Temp {
       this.high = high;
       this.low = low; 
     }
-    
 
-    /********* THIS WORKS IN CODE.ORG **********
-     * THESE FILES DO NOT WORK IN VS CODE
-     * I MAY HAVE USED SOME INSPIRATION
-     * DO NOT TAKE THIS ACCOUNTED
-    */
-    
     public static Temp[] createTemp(String tempHighFile, String tempLowFile){
           double[] tempHigh= FileReader.toDoubleArray(tempHighFile);
           double[] tempLow = FileReader.toDoubleArray(tempLowFile);
@@ -28,7 +21,6 @@ public class Temp {
           for(int i = 0; i<tempHigh.length; i++){
             dataSet[i] = new Temp(tempHigh[i], tempLow[i]); 
           }
-
         return dataSet;
   }
 }

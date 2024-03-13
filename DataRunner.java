@@ -3,7 +3,9 @@
 import java.util.Scanner;
 public class DataRunner {
     public static void main(String[] args){
+      
         Temp[] temperatures = Temp.createTemp("tempHigh.txt","tempLow.txt");
+      
         //Where all the running will happen
         System.out.println("\n\n\nData Visusalisation project on climate change.\n\n\n");
         //we are doing the project on the tons of CO2 in the atmosphere per year over the past 100 year
@@ -17,7 +19,7 @@ public class DataRunner {
          */
         System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
         String choice = userChoice.nextLine();
-
+        
         
         if(choice.equals("CO2")){
             System.out.println("How many ({days} or {years}) would you like to go back?");

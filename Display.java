@@ -12,8 +12,5 @@ public class Display /*extends scene*/{
     public int getYearsToGoBack(){
         return daysToGoBack; 
     }
-
-
-
-
+    
 }
