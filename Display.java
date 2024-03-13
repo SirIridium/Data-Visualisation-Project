@@ -1,12 +1,17 @@
 //remember that this extends the scene. 
 public class Display /*extends scene*/{
     private static final int YEAR = 2024;
-    private int daysToGoBack; 
 
+    //the number of days that the user wants to see back into 
+    private static int past = 0; 
 
-    //returns the yearsToGoBack
-    public int getYearsToGoBack(){
-        return daysToGoBack; 
+    public Display(){
+        past = 100; 
     }
+    public int getPast(){
+        return past; 
+    }
+
+    
 
 }
