@@ -37,6 +37,7 @@ public class Temp {
   /* This is something I am building by myself
    * It should return a 2d array holding the high and low temps of the days
    * and it should be as long as the temps data is long. 
+   * THIS CAN CREATE A 2D ARRAY OF THE DATA VALUES
    */
   public static String printTemps(Temp[] data){
 
