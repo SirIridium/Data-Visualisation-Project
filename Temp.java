@@ -1,6 +1,5 @@
-//import java.io.FileReader;
 
-public class Temp {
+public class Temp{
     //co2 emission per day per area
     //temperature per day per area
     //this is the class that will represent the temp per year
