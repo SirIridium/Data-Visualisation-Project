@@ -17,11 +17,12 @@ public class DataRunner {
          */
         System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
         String choice = userChoice.nextLine();
-        
+
         
         if(choice.equals("CO2")){
             System.out.println("How many ({days} or {years}) would you like to go back?");
             userChoice.nextInt();
+            userChoice.delimiter();
             //whatever(choice);
             }
 
@@ -30,6 +31,7 @@ public class DataRunner {
         if(choice.equals("Rain")){
             System.out.println("How many ({days} or {years}) would you like to go back?");
             userChoice.nextInt();
+            userChoice.delimiter(); 
             //whatever(choice);
             }
 
@@ -38,6 +40,7 @@ public class DataRunner {
         if(choice.equals("Temp")){
             System.out.println("How many ({days} or {years}) would you like to go back?");
             userChoice.nextInt();
+            userChoice.delimiter(); 
             //whatever(choice);
             }
 

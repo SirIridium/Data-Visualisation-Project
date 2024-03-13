@@ -14,7 +14,12 @@ public class Temp {
     }
     
 
-    /********* THIS WORKS IN CODE.ORG ***********/
+    /********* THIS WORKS IN CODE.ORG **********
+     * THESE FILES DO NOT WORK IN VS CODE
+     * I MAY HAVE USED SOME INSPIRATION
+     * DO NOT TAKE THIS ACCOUNTED
+    */
+    
     public static Temp[] createTemp(String tempHighFile, String tempLowFile){
           double[] tempHigh= FileReader.toDoubleArray(tempHighFile);
           double[] tempLow = FileReader.toDoubleArray(tempLowFile);
