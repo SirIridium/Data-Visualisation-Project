@@ -22,7 +22,6 @@ public class DataRunner {
         if(choice.equals("CO2")){
             System.out.println("How many ({days} or {years}) would you like to go back?");
             userChoice.nextInt();
-            userChoice.delimiter();
             //whatever(choice);
             }
 
@@ -31,7 +30,6 @@ public class DataRunner {
         if(choice.equals("Rain")){
             System.out.println("How many ({days} or {years}) would you like to go back?");
             userChoice.nextInt();
-            userChoice.delimiter(); 
             //whatever(choice);
             }
 
@@ -40,7 +38,6 @@ public class DataRunner {
         if(choice.equals("Temp")){
             System.out.println("How many ({days} or {years}) would you like to go back?");
             userChoice.nextInt();
-            userChoice.delimiter(); 
             //whatever(choice);
             }
 
