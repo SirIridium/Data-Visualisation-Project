@@ -11,7 +11,4 @@ public class Display /*extends scene*/{
     public int getPast(){
         return past; 
     }
-
-    
-
 }
