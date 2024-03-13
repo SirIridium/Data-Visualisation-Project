@@ -53,7 +53,10 @@ public class Temp {
     }
     return tempsToString(tempsGraph); 
   }
-
+    /* this converts the tempGraph created in the print Temps method
+     * into a string which would make this a lot easier to print
+     * bassically this is a support method
+     */
     public static String tempsToString(double[][] tempsGraph2){
         String result = ""; 
         for(int row = 0; row < tempsGraph2.length; row++){
