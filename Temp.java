@@ -1,5 +1,6 @@
+//import java.io.FileReader;
 
-public class Temp{
+public class Temp {
     //co2 emission per day per area
     //temperature per day per area
     //this is the class that will represent the temp per year
@@ -12,13 +13,14 @@ public class Temp{
       this.low = low; 
     }
 
-    public static Temp[] createTemp(String tempHighFile, String tempLowFile){
+    public static double[][] createTemp(String tempHighFile, String tempLowFile){
           double[] tempHigh= FileReader.toDoubleArray(tempHighFile);
           double[] tempLow = FileReader.toDoubleArray(tempLowFile);
-          Temp[] dataSet = new Temp[tempHigh.length]; 
+          double[][] dataSet = new double[tempHigh.length][2]; 
       
-          for(int i = 0; i<tempHigh.length; i++){
-            dataSet[i] = new Temp(tempHigh[i], tempLow[i]); 
+          for(int i= 0;i<tempHigh.length; i++){
+           dataSet[i][0]=tempHigh[i];
+            dataSet[i][1]=tempLow[i];
           }
         return dataSet;
   }
@@ -33,12 +35,8 @@ public class Temp{
         return low; 
     }
 
-  /* This is something I am building by myself
-   * It should return a 2d array holding the high and low temps of the days
-   * and it should be as long as the temps data is long. 
-   * THIS CAN CREATE A 2D ARRAY OF THE DATA VALUES
-   */
-  public static String printTemps(Temp[] data){
+  /*
+  public static dou\ble[][] printTemps(Temp[] data){
 
     double[][] tempsGraph = new double[data.length][2];
 
@@ -51,7 +49,7 @@ public class Temp{
             }
         }
     }
-    return tempsToString(tempsGraph); 
+    return temps; 
   }
     /* this converts the tempGraph created in the print Temps method
      * into a string which would make this a lot easier to print
