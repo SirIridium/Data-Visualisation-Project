@@ -1,25 +1,32 @@
 //import java.io.FileReader;
 
 public class Temp {
-    //co2 emission per day per area
-    //temperature per day per area
-    //this is the class that will represent the temp per year
+    /* There will be 3 variales
+     * High and low store the high and low variables for the temp day class
+     * day will represent how many days it has gone back. 
+     */
     private double high;
     private double low; 
+    private static int day=0; //we could make this a shared var if we had a superclass???????????????????????????
 
-    //the temp array will be made with the text file of all the tons.
     public Temp(double high, double low){
       this.high = high;
       this.low = low; 
+      day++; 
     }
 
+
+    /* Creates and returns a 2d array of doubles
+     * that stores the high Temperature of each day in row 0
+     * and the low temperature of each day in row 1 
+     */
     public static double[][] createTemp(String tempHighFile, String tempLowFile){
-          double[] tempHigh= FileReader.toDoubleArray(tempHighFile);
+          double[] tempHigh = FileReader.toDoubleArray(tempHighFile);
           double[] tempLow = FileReader.toDoubleArray(tempLowFile);
           double[][] dataSet = new double[tempHigh.length][2]; 
       
           for(int i= 0;i<tempHigh.length; i++){
-           dataSet[i][0]=tempHigh[i];
+            dataSet[i][0]=tempHigh[i];
             dataSet[i][1]=tempLow[i];
           }
         return dataSet;
@@ -33,23 +40,11 @@ public class Temp {
     public double getLowTemp(){
         return low; 
     }
-
-  /*
-  public static dou\ble[][] printTemps(Temp[] data){
-
-    double[][] tempsGraph = new double[data.length][2];
-
-    for(int i = 0; i < data.length; i++){
-        for(int low = 0; low <= 1; low ++){
-            if(low==0)
-                tempsGraph[i][0] = data[i].getHighTemp();
-            else{
-                tempsGraph[i][1] = data[i].getLowTemp(); 
-            }
-        }
+    public int getDay(){
+      return day; 
     }
-    return temps; 
-  }
+
+
     /* this converts the tempGraph created in the print Temps method
      * into a string which would make this a lot easier to print
      * bassically this is a support method
@@ -66,18 +61,3 @@ public class Temp {
         return result;
     }
 }
-
-
-
-/* 
-public static Brand[] createBrands(String namesFile, String gendersFile) {
-    String[] namesData = FileReader.toStringArray(namesFile);
-    String[] gendersData = FileReader.toStringArray(gendersFile);
-    Brand[] brandsData = new Brand[namesData.length];
-
-    for (int index = 0; index < brandsData.length; index++) {
-      brandsData[index] = new Brand(namesData[index], gendersData[index]);
-    }
-
-    return brandsData;
-    */
