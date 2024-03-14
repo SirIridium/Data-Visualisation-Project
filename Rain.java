@@ -1,3 +1,3 @@
-Public class Temp extends Display (
+Public class Temp  (
     
 )

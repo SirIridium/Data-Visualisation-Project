@@ -24,7 +24,6 @@ public class Temp {
           }
         return dataSet;
   }
-
     /* getter methods
      * will be used to return a graph 
      */
