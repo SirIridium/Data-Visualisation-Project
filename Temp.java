@@ -1,18 +1,17 @@
 //import java.io.FileReader;
 
-public class Temp {
+public class Temp extends Display {
     /* There will be 3 variales
      * High and low store the high and low variables for the temp day class
      * day will represent how many days it has gone back. 
      */
     private double high;
     private double low; 
-    private static int day=0; //we could make this a shared var if we had a superclass???????????????????????????
-
+    
     public Temp(double high, double low){
       this.high = high;
       this.low = low; 
-      day++; 
+
     }
 
 

@@ -1,3 +1,3 @@
-Public class Temp  (
+public class Rain extends Display (
     
 )
