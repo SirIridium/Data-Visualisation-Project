@@ -1,8 +1,9 @@
 
 import org.code.theater.*;
 import java.util.Scanner;
+
 public class DataRunner {
-    public static void main(String[] args){
+  public static void main(String[] args){
       
       //  Temp[] temperatures = Temp.createTemp("tempHigh.txt","tempLow.txt");
       TempVisual tempGraph = new TempVisual();
@@ -25,34 +26,36 @@ public class DataRunner {
          * We are going to build the conditionals as a debugging structure, 
          * however we need to decide what we are doing for the project.
          */
+
+
+        
         System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
         String choice = userChoice.nextLine();
-        
-        
-        if(choice.equals("CO2")){
-            System.out.println("How many ({days} or {years}) would you like to go back?");
-            userChoice.nextInt();
-            //whatever(choice);
-            }
+        while(!(choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain"))){
 
-        
+          if(choice.equals("CO2") || choice.equals("co2")){
+            System.out.println("How many days would you like to go back?");
+              userChoice.nextInt();
+          }
 
-        if(choice.equals("Rain")){
-            System.out.println("How many ({days} or {years}) would you like to go back?");
-            userChoice.nextInt();
-            //whatever(choice);
-            }
+            
 
-        
+            if(choice.equals("Rain") || choice.equals("rain")){
+                System.out.println("How many days would you like to go back?");
+                userChoice.nextInt();
+                //whatever(choice);
+                }
 
-        if(choice.equals("Temp")){
-            System.out.println("How many ({days} or {years}) would you like to go back?");
-            userChoice.nextInt();
-            //whatever(choice);
-            }
+            
+
+            if(choice.equals("Temp") || choice.equals("temp")){
+                System.out.println("How many days would you like to go back?");
+                userChoice.nextInt();
+                //whatever(choice);
+                }
 
         userChoice.close();
-      
+              }
         }
 
 }
