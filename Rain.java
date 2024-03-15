@@ -1,4 +1,4 @@
-Public class Temp extends Display (
+Public class Temp(
     /*This is the class that will represent the rain/snowfall over the years
     ----------------------------------------------------------------
     Rain will be measured in CM per month for 10 years

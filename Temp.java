@@ -1,6 +1,6 @@
 //import java.io.FileReader;
 
-public class Temp extends Display {
+public class Temp {
     /* There will be 3 variales
      * High and low store the high and low variables for the temp day class
      * day will represent how many days it has gone back. 
