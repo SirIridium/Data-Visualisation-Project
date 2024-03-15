@@ -1,3 +1,11 @@
+import org.code.theater.*;
+import org.code.media.*;
+
+public class TempVisual extends Scene{
+public void drawGraph(double[][] data){
+  
+  int spacing=0;
+  int space=400/data[0].length;
 int spacing=0;
     int space=400/days;
   int scale=1;
