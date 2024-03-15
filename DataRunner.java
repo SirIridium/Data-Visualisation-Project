@@ -33,25 +33,23 @@ public class DataRunner {
         String choice = userChoice.nextLine();
         while(!(choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain"))){
 
-          if(choice.equals("CO2") || choice.equals("co2")){
+          if(choice.equalsIgnoreCase("CO2")){
             System.out.println("How many days would you like to go back?");
               userChoice.nextInt();
           }
 
             
 
-            if(choice.equals("Rain") || choice.equals("rain")){
+            if(choice.equalsIgnoreCase("rain")){
                 System.out.println("How many days would you like to go back?");
                 userChoice.nextInt();
-                //whatever(choice);
                 }
 
             
 
-            if(choice.equals("Temp") || choice.equals("temp")){
+            if(choice.equalsIgnoreCase("temp")){
                 System.out.println("How many days would you like to go back?");
                 userChoice.nextInt();
-                //whatever(choice);
                 }
 
         userChoice.close();
