@@ -8,5 +8,5 @@ public class Display /*extends scene*/{
 
     public int getDay(){
         return day; 
-    }
+    }\
 }
