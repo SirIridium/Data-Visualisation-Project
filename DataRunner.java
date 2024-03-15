@@ -29,29 +29,30 @@ public class DataRunner {
 
 
         
-        System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
-        String choice = userChoice.nextLine();
+        
         while(!(choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain"))){
+          
+          System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
+          String choice = userChoice.nextLine();
 
-          if(choice.equalsIgnoreCase("CO2")){
+
+           if(choice.equalsIgnoreCase("CO2")){
             System.out.println("How many days would you like to go back?");
               userChoice.nextInt();
           }
 
-            
-
-            if(choice.equalsIgnoreCase("rain")){
+    
+            else if(choice.equalsIgnoreCase("rain")){
                 System.out.println("How many days would you like to go back?");
                 userChoice.nextInt();
                 }
 
             
 
-            if(choice.equalsIgnoreCase("temp")){
+            else if(choice.equalsIgnoreCase("temp")){
                 System.out.println("How many days would you like to go back?");
                 userChoice.nextInt();
                 }
-
         userChoice.close();
               }
         }
