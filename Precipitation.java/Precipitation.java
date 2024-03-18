@@ -1,4 +1,4 @@
-Public class Precipitation(
+Public class Precipitation{
     /*This is the class that will represent the rain/snowfall over the years
     ----------------------------------------------------------------
     Rain will be measured in CM per month for 10 years
@@ -51,4 +51,4 @@ public static String precipitationToString(double[][] rainGraph2){
     return result;
 }
 
-)
+}
