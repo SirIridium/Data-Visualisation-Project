@@ -7,7 +7,7 @@ Public class Temp(
     
     private double rain;
     private double snow;
-    public Rain(double rain){
+    public Rain(double rain, double snow){
         this.rain = rain;
         this.snow=snow;
   
