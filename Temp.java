@@ -17,7 +17,7 @@ public class Temp{
 
     /* Creates and returns a 2d array of doubles
      * that stores the high Temperature of each day in row 0
-     * and the low temperature of each day in row 1 
+     * and the low temperature of each day in row 1  
      */
     public static double[][] createTemp(String tempHighFile, String tempLowFile){
           double[] tempHigh = FileReader.toDoubleArray(tempHighFile);
