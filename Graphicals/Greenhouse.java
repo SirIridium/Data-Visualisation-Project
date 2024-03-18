@@ -1,4 +1,4 @@
-public class {
+public class Greenhouse{
 /* This is the class that will measure the CO2 levels and plastic levels in the ocean  
  * ----------------------------------------------------------------
  * TODO:
