@@ -3,6 +3,8 @@ Public class Temp(
     ----------------------------------------------------------------
     Rain will be measured in CM per month for 10 years
     ^ Same with snow 
+    THATS GONNA TAKE FOREVER 
+    check issues. 
     */
     
     private double rain;

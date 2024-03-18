@@ -1,12 +1,13 @@
 
 import org.code.theater.*;
 import java.util.Scanner;
+
 public class DataRunner {
-    public static void main(String[] args){
+  public static void main(String[] args){
       
       //  Temp[] temperatures = Temp.createTemp("tempHigh.txt","tempLow.txt");
       TempVisual tempGraph = new TempVisual();
-     tempGraph.drawGraph(Temp.createTemp("tempHigh.txt","tempLow.txt"));
+      tempGraph.drawGraph(Temp.createTemp("tempHigh.txt","tempLow.txt"));
 
      
       Theater.playScenes(tempGraph);
@@ -25,34 +26,39 @@ public class DataRunner {
          * We are going to build the conditionals as a debugging structure, 
          * however we need to decide what we are doing for the project.
          */
-        System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
-        String choice = userChoice.nextLine();
-        
-        
-        if(choice.equals("CO2")){
-            System.out.println("How many ({days} or {years}) would you like to go back?");
-            userChoice.nextInt();
-            //whatever(choice);
-            }
 
-        
+        while(!(choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain"))){
 
-        if(choice.equals("Rain")){
-            System.out.println("How many ({days} or {years}) would you like to go back?");
-            userChoice.nextInt();
-            //whatever(choice);
-            }
+          System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
+          String choice = userChoice.nextLine();
 
-        
+          /* the method .equalsIgnoreCase() checks if the string 
+           * is equal to the other string but it is NOT
+           * case sensitive
+           * 
+           * i.e. CO2 == co2 
+           * 
+           */
 
-        if(choice.equals("Temp")){
-            System.out.println("How many ({days} or {years}) would you like to go back?");
-            userChoice.nextInt();
-            //whatever(choice);
-            }
+           if(choice.equalsIgnoreCase("CO2")){
+            System.out.println("How many days would you like to go back?");
+              userChoice.nextInt();
+          }
 
+    
+            else if(choice.equalsIgnoreCase("rain")){
+                System.out.println("How many days would you like to go back?");
+                userChoice.nextInt();
+                }
+
+            
+
+            else if(choice.equalsIgnoreCase("temp")){
+                System.out.println("How many days would you like to go back?");
+                userChoice.nextInt();
+                }
         userChoice.close();
-      
+              }
         }
 
 }

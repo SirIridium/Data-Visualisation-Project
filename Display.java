@@ -1,5 +1,5 @@
 //remember that this extends the scene. 
-public class Display /*extends scene*/{
+public class Display extends scene{
     private static int day = 0; 
 
     public Display(){
@@ -8,5 +8,5 @@ public class Display /*extends scene*/{
 
     public int getDay(){
         return day; 
-    }\
+    }
 }
