@@ -8,7 +8,7 @@ public class TempVisual extends Scene {
     double space = 400.0 / (double)(days); 
     int scale = 3;
     int shift = 100;
-    
+
   if(days==1){
     setStrokeColor("red");
     drawLine((int)spacing, (400 - (int)data[0][0] * scale) - shift, (int)(spacing + space), (400 - (int)data[0][0] * scale) - shift);
