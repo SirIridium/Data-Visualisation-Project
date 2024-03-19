@@ -41,7 +41,7 @@ public class DataRunner {
            */
 
            if(choice.equalsIgnoreCase("CO2")){
-            System.out.println("How many days would you like to go back?");
+            System.out.println("How many years would you like to go back?");
               userChoice.nextInt();
           }
 
