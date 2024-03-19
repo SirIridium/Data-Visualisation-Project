@@ -13,7 +13,7 @@ Public class Precipitation{
   
       }
 
-      public static double[][] createRain(String rainFile, String snowFile){
+      public static double[][] createPrecipitation(String rainFile, String snowFile){
         double[] rain = FileReader.toDoubleArray(rainFile);
         double[] snow = FileReader.toDoubleArray(snowFile);
         double[][] dataSet = new double[rain.length][2]; 

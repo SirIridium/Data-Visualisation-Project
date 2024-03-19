@@ -9,7 +9,16 @@ public class DataRunner {
       TempVisual tempGraph = new TempVisual();
       tempGraph.drawGraph(Temp.createTemp("tempHigh.txt","tempLow.txt"));
 
+      // PrecipitationVisual precipitationGraph = new PrecipitationVisual();
+      // precipitationGraph.drawGraph(Precipitation.createPrecipitation("Wet%perMonth.txt","Dry%perMonth.txt"));
+
+      // Need Data for greenhouse (just CO2 Tons)
+      // GreenhouseVisual greenhouseGraph = new GreenhouseVisual();
+      // greenhouseGraph.drawGraph(Greenhouse.createGreenhouse("CO2.txt","plastic.txt"));
+
+      /* How do we integrate this ^*/
      
+
       Theater.playScenes(tempGraph);
         //Where all the running will happen
         System.out.println("\n\n\nData Visusalisation project on climate change.\n\n\n");
