@@ -1,16 +1,15 @@
-
+import org.code.media.*;
 import org.code.theater.*;
 import java.util.Scanner;
-
 public class DataRunner {
-  public static void main(String[] args){
+    public static void main(String[] args){
       
       //  Temp[] temperatures = Temp.createTemp("tempHigh.txt","tempLow.txt");
       TempVisual tempGraph = new TempVisual();
       tempGraph.drawGraph(Temp.createTemp("tempHigh.txt","tempLow.txt"));
 
       // PrecipitationVisual precipitationGraph = new PrecipitationVisual();
-      // precipitationGraph.drawGraph(Precipitation.createPrecipitation("WetperMonth.txt","DryperMonth.txt"));
+      // precipitationGraph.drawGraph(Precipitation.createPrecipitation("Wet%perMonth.txt","Dry%perMonth.txt"));
 
       // Need Data for greenhouse (just CO2 Tons)
       // GreenhouseVisual greenhouseGraph = new GreenhouseVisual();
@@ -29,45 +28,55 @@ public class DataRunner {
 
       
         Scanner userChoice = new Scanner(System.in);
-        
+         System.out.println("\n\n\nData Visusalisation project on climate change.\n\n\n");
         /* we are going to be using the user choice
          * This is going to check what the user is picking for their graph / years they want to see
          * We are going to build the conditionals as a debugging structure, 
          * however we need to decide what we are doing for the project.
          */
+        System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
+        String choice = userChoice.nextLine();
+        
+        
+        if(choice.equals("CO2")){
+          int days=0;
+            System.out.println("How many or years would you like to go back?");
+            days=userChoice.nextInt();
+          PrecipitationVisual thing= new PrecipitationVisual();
+     thing.drawGraph(FileReader.toDoubleArray("tons.txt"),days);
+      Theater.playScenes(thing);
+            //whatever(choice);
+            }
 
-        while(!(choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain"))){
+        
 
-          System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
-          String choice = userChoice.nextLine();
+        if(choice.equals("Rain")){
+          int days=0;
+            System.out.println("How many ({days} or {years}) would you like to go back?");
+            days=userChoice.nextInt();
+          /*
+          PrecipitationVisual thing= new PrecipitationVisual();
+     thing.drawGraph(Temp.createTemp(amongus),days);
+      Theater.playScenes(thing);
+          */
+            //whatever(choice);
+            }
 
-          /* the method .equalsIgnoreCase() checks if the string 
-           * is equal to the other string but it is NOT
-           * case sensitive
-           * 
-           * i.e. CO2 == co2 
-           * 
-           */
+        
 
-           if(choice.equalsIgnoreCase("CO2")){
-            System.out.println("How many years would you like to go back?");
-              userChoice.nextInt();
-          }
+        if(choice.equals("Temp") || choice.equals("temp")){
+          int days=0;
+            System.out.println("How many ({days} or {years}) would you like to go back?");
+            days=userChoice.nextInt();
+          TempVisual thing= new TempVisual();
+     thing.drawGraph(Temp.createTemp("tempHigh.txt","tempLow.txt"),days);
+      Theater.playScenes(thing);
+        //Where all the running will happen
+            //whatever(choice);
+            }
 
-    
-            else if(choice.equalsIgnoreCase("rain")){
-                System.out.println("How many days would you like to go back?");
-                userChoice.nextInt();
-                }
-
-            
-
-            else if(choice.equalsIgnoreCase("temp")){
-                System.out.println("How many days would you like to go back?");
-                userChoice.nextInt();
-                }
         userChoice.close();
-              }
+      
         }
 
 }
