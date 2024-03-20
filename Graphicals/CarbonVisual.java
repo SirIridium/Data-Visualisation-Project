@@ -1,6 +1,6 @@
 import org.code.theater.*;
 import org.code.media.*;
-public class PrecipitationVisual extends Scene{
+public class CarbonVisual extends Scene{
    public void drawGraph(double[] data, int years) {
         double spacing = 0.0; 
         double space = 400.0 / (double)(years); 
