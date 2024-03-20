@@ -1,3 +1,7 @@
+import org.code.theater.*;
+import org.code.media.*;
+
+
 public class Greenhouse{
 /* This is the class that will measure the CO2 levels and plastic levels in the ocean  
  * ----------------------------------------------------------------
@@ -10,27 +14,20 @@ public class Greenhouse{
     private double tonnesCO2;
     private double tonnesPlastic;
 
-    public Greenhouse(double CO2, double plastic){
-        this.CO2 = CO2;
-        this.plastic = Plastic; 
-  
-      }
+    public Greenhouse(double CO2){
+      this.tonnesCO2 =CO2;
+    }
   
   
       /* Creates and returns a 2d array of doubles
        * that stores the Tonnes of CO2 of each month in row 0
        * and the tonnes plastic in ocean of each day in row 1  
        */
-      public static double[][] createGreenhouse(String CO2File, String plasticFile){
-            double[] tempHigh = FileReader.toDoubleArray(CO2File);
-            double[] tempLow = FileReader.toDoubleArray(plasticFile);
-            double[][] dataSet = new double[CO2File.length][2]; 
-        
-            for(int i= 0;i<CO2File.length; i++){
-              dataSet[i][0]=CO2File[i];
-              dataSet[i][1]=plasticFile[i];
-            }
-          return dataSet;
+      public static double[] createGreenhouse(String CO2File){
+            double[] CO2File = FileReader.toDoubleArray(CO2File);
+          
+            
+          return CO2File;
     }
       /* getter methods
        * will be used to return a graph 
@@ -38,14 +35,7 @@ public class Greenhouse{
       public double getCO2(){
           return tonnesCO2; 
       }
-      public double getPlastic(){
-          return tonnesPlastic; 
-      }
-      public int getDay(){
-        return day; 
-      }
-  
-  
+
       /* this converts the tempGraph created in the print Temps method
        * into a string which would make this a lot easier to print
        * bassically this is a support method
@@ -61,5 +51,4 @@ public class Greenhouse{
           }
           return result;
       }
-
 }
