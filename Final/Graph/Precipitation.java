@@ -1,3 +1,4 @@
+package Final.Graph;
 import org.code.theater.*;
 import org.code.media.*;
 public class Precipitation{
