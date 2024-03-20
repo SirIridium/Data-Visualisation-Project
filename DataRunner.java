@@ -36,10 +36,14 @@ public class DataRunner {
         
 
         if(choice.equals("Rain")){
-          int days=0;
-            System.out.println("How many ({days} or {years}) would you like to go back?");
-            days=userChoice.nextInt();
+            int month=0;
+            System.out.println("What month would you like to see?");
+            month=userChoice.nextInt();
+      WaterVisual thing= new WaterVisual();
+     thing.drawGraph(FileReader.toDoubleArray("wet.txt"),FileReader.toDoubleArray("dry.txt"),month);
+      Theater.playScenes(thing);
 
+            
             }
 
         
