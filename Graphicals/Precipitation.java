@@ -1,3 +1,4 @@
+import org.code.theater.*;
 Public class Precipitation{
     /*This is the class that will represent the rain/snowfall over the years
     ----------------------------------------------------------------
