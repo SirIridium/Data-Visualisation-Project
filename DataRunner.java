@@ -41,14 +41,7 @@ public class DataRunner {
           System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
           String choice = userChoice.nextLine();
 
-          /* the method .equalsIgnoreCase() checks if the string 
-           * is equal to the other string but it is NOT
-           * case sensitive
-           * 
-           * i.e. CO2 == co2 
-           * 
-           */
-
+         
            if(choice.equals("CO2")){
             System.out.println("How many years would you like to go back?");
               userChoice.nextInt();

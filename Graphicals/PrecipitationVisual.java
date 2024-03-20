@@ -1,5 +1,7 @@
 import org.code.theater.*;
 import org.code.media.*;
+
+
 public class PrecipitationVisual extends Scene{
    public void drawGraph(double[] data, int days) {
         double spacing = 0.0; 
