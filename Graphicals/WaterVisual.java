@@ -12,8 +12,6 @@ public class WaterVisual extends Scene{
       setStrokeColor("blue");
       drawLine((int)spacing, (400 - (int)(wetData[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(wetData[i+i]+0.5) * scale) - shift);
       setStrokeColor("red");
-        drawLine((int)spacing, (400 - (int)(dryData[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(dryData[i+i]+0.5) * scale) - shift);
+      drawLine((int)spacing, (400 - (int)(dryData[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(dryData[i+i]+0.5) * scale) - shift);
             spacing += space;
-    }
-}
-    } 
+    }}} 

@@ -24,7 +24,7 @@ public class Greenhouse{
        * and the tonnes plastic in ocean of each day in row 1  
        */
       public static double[] createGreenhouse(String CO2File){
-            double[] CO2File = FileReader.toDoubleArray(CO2File);
+            double[] carbonFile = FileReader.toDoubleArray(CO2File);
           
             
           return CO2File;
@@ -40,15 +40,9 @@ public class Greenhouse{
        * into a string which would make this a lot easier to print
        * bassically this is a support method
        */
-      public static String GreenhouseToString(double[][] greenhouseGraph2){
-          String result = ""; 
-          for(int row = 0; row < greenhouseGraph2.length; row++){
-            result += "Day " + (row+1) + " ";
-              for(int col=0; col <= 1; col++){
-                  result+= " | " + greenhouseGraph2[row][col] +" | ";
-              }
-              result += "\n";
-          }
-          return result;
-      }
 }
+
+
+
+
+
