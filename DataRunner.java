@@ -10,7 +10,7 @@ public class DataRunner {
       tempGraph.drawGraph(Temp.createTemp("tempHigh.txt","tempLow.txt"));
 
       // PrecipitationVisual precipitationGraph = new PrecipitationVisual();
-      // precipitationGraph.drawGraph(Precipitation.createPrecipitation("Wet%perMonth.txt","Dry%perMonth.txt"));
+      // precipitationGraph.drawGraph(Precipitation.createPrecipitation("WetperMonth.txt","DryperMonth.txt"));
 
       // Need Data for greenhouse (just CO2 Tons)
       // GreenhouseVisual greenhouseGraph = new GreenhouseVisual();
