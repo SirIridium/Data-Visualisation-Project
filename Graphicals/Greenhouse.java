@@ -27,7 +27,7 @@ public class Greenhouse{
             double[] carbonFile = FileReader.toDoubleArray(CO2File);
           
             
-          return CO2File;
+          return carbonFile;
     }
       /* getter methods
        * will be used to return a graph 
