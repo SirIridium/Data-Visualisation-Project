@@ -10,9 +10,9 @@ public class WaterVisual extends Scene{
         int shift = 100;
     for(int i=month;i<dryData.length/2-12;i+=12){
       setStrokeColor("blue");
-      drawLine((int)spacing, (400 - (int)(wetData[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(wetData[i+i]+0.5) * scale) - shift);
+      drawLine((int)spacing, (400 - (int)(wetData[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(wetData[i+12]+0.5) * scale) - shift);
       setStrokeColor("red");
-        drawLine((int)spacing, (400 - (int)(dryData[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(dryData[i+i]+0.5) * scale) - shift);
+        drawLine((int)spacing, (400 - (int)(dryData[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(dryData[i+12]+0.5) * scale) - shift);
             spacing += space;
     }
 }
