@@ -41,8 +41,3 @@ public class Greenhouse{
        * bassically this is a support method
        */
 }
-
-
-
-
-
