@@ -23,6 +23,7 @@ public class TempVisual extends Scene {
       drawLine((int)spacing, (400 - (int)(data[0][0]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(data[0][0]+0.5) * scale) - shift);
       setStrokeColor("blue");
       drawLine((int)spacing, (400 - (int)(data[0][1]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(data[0][1]+0.5) * scale) - shift);
+      pause(.1);
     }
     
     if(days==data.length){ //Avoids errors when days is max
@@ -32,6 +33,7 @@ public class TempVisual extends Scene {
         setStrokeColor("blue");
         drawLine((int)spacing, (400 - (int)(Math.min(data[i][0],data[i][1])+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(Math.min(data[i+1][0],data[i+1][1])+0.5) * scale) - shift);
         spacing += space;
+        pause(.1);
       }
     }
 
@@ -42,6 +44,7 @@ public class TempVisual extends Scene {
         setStrokeColor("blue");
         drawLine((int)spacing, (400 - (int)(Math.min(data[i][0],data[i][1])+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(Math.min(data[i+1][0],data[i+1][1])+0.5) * scale) - shift);
         spacing += space;
+        pause(.1);
       }
     }
     drawText("Temperature grpah \n Days : " + days,100,375);

@@ -19,6 +19,7 @@ public class CarbonVisual extends Scene{
     if(years==1){ //Draws straight line if years=1
       setStrokeColor("purple");
       drawLine(0, (400 - (int)(data[0]+0.5) * scale) - shift, 400, (400 - (int)(data[0]+0.5) * scale) - shift);
+      pause(.1);
     }
     
     if(years==data.length){ //Avoids errors when years is max
@@ -27,6 +28,7 @@ public class CarbonVisual extends Scene{
       for(int i=0;i<data.length-1;i++){
         drawLine((int)spacing, (400 - (int)(data[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(data[i+1]+0.5) * scale) - shift);
         spacing += space;
+        pause(.1);
       }
     }
       
@@ -36,6 +38,7 @@ public class CarbonVisual extends Scene{
       for (int i = 0; i < years; i++) { 
         drawLine((int)spacing, (400 - (int)(data[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(data[i+1]+0.5) * scale) - shift);
         spacing += space;
+        pause(.1);
       }
     }
     drawText("CO2 Graph",150,350);

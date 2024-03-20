@@ -10,7 +10,6 @@ public class WaterVisual extends Scene{
    * and the dryest days of the month
    */
   public void drawGraph(double[] wetData, double[] dryData, int month) {
-    
     double spacing = 0.0; 
     double space = 400.0 / (double)(dryData.length/24); 
     int scale = 10;
@@ -22,6 +21,7 @@ public class WaterVisual extends Scene{
       setStrokeColor("red");//Denotes wet
       drawLine((int)spacing, (400 - (int)(dryData[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(dryData[i+12]+0.5) * scale) - shift);
       spacing += space;
+      pause(.1);
     }
     String[] months= {"December","January","February","March","April","May","June","July","August","September","October","November","December"};
     setTextColor("Black");
