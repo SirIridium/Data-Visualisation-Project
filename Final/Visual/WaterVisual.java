@@ -31,4 +31,4 @@ public class WaterVisual extends Scene{
     setTextColor("Blue");
     drawText("Blue=wet Month",200,375);
   }
-} 
+}
