@@ -36,7 +36,7 @@ public class DataRunner {
          * however we need to decide what we are doing for the project.
          */
 
-        while(!(choice.equals("rain") || choice.equals("rain") || choice.equals("rain"))){
+        while(!(userChoice.equals("rain") || userChoice.equals("rain") || userChoice.equals("rain"))){
 
           System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
           String choice = userChoice.nextLine();
