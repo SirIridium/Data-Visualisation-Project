@@ -8,7 +8,7 @@ public class WaterVisual extends Scene{
         double space = 400.0 / (double)(dryData.length/25); 
         int scale = 10;
         int shift = 100;
-    for(int i=month;i<dryData.length/2-12;i+=12){
+    for(int i=month;i<dryData.length/2-12;i+=12){//Skips 12 months to take 1 month from each year
       setStrokeColor("blue");
       drawLine((int)spacing, (400 - (int)(wetData[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(wetData[i+12]+0.5) * scale) - shift);
       setStrokeColor("red");
