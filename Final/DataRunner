@@ -19,7 +19,7 @@ public class DataRunner {
             System.out.println("How many years would you like to go back?");
             days=userChoice.nextInt();
           CarbonVisual thing= new CarbonVisual();
-     thing.drawGraph(Carbon.createGreenhouse("tons.txt"),days);
+     thing.drawGraph(Carbon.createGreenhouse("megatons.txt"),days);
       Theater.playScenes(thing);
             }
 
