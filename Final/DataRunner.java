@@ -34,8 +34,7 @@ public class DataRunner {
      */
     if(choice.equals("Rain") || choice.equals("rain")){
       int month=0;
-      
-      System.out.println("What month would you like to see?");
+      System.out.println("What month would you like to see? (0 = December, 1 = January etc): ");
       month=userChoice.nextInt();
       WaterVisual thing= new WaterVisual();
       thing.drawGraph(Precipitation.createWetPrecipitation("wet.txt"),Precipitation.createDryPrecipitation("dry.txt"),month);
@@ -48,7 +47,7 @@ public class DataRunner {
      */
     if(choice.equals("Temp") || choice.equals("temp")){
       int days=0;
-      System.out.println("How many ({days} or {years}) would you like to go back?");
+      System.out.println("How many days would you like to go back?");
       days=userChoice.nextInt();
       TempVisual thing= new TempVisual();
       thing.drawGraph(Temp.createTemp("tempHigh.txt","tempLow.txt"),days);

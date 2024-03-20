@@ -36,5 +36,3 @@ public class Temp {
     return result;
   }
 }
-
-
