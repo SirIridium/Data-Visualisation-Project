@@ -1,1 +1,2 @@
-This has all of the final code, it doesn't matter if there are duplicate names, you may as well reset the project and add these files in. All of the files have been cleaned up to remove unnecessary methods and cronstructors. The code has been tested on code.org so it should be alright.
+This is the final code:
+As in it is formatted and cleaned.
