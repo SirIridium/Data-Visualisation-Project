@@ -13,4 +13,4 @@
 
  For the Temperature, using data from Underground Weather, a free funded weather data site, we have data going back for everyday of the year, highest and lowest for every day. 
 
- Using this you, need to run it in CODE.ORG because all of the visuals are API's of theirs and classes of theirs, so this is using their classes. 
+* Using this you, need to run it in CODE.ORG because all of the visuals are API's of theirs and classes of theirs, so this is using their classes. *
