@@ -27,9 +27,11 @@ public class DataRunner {
           int days=0;
             System.out.println("How many or years would you like to go back?");
             days=userChoice.nextInt();
+
+
           PrecipitationVisual thing= new PrecipitationVisual();
-     thing.drawGraph(FileReader.toDoubleArray("tons.txt"),days);
-      Theater.playScenes(thing);
+        thing.drawGraph(FileReader.toDoubleArray("tons.txt"),days);
+        Theater.playScenes(thing);
             //whatever(choice);
             }
 
@@ -39,12 +41,7 @@ public class DataRunner {
           int days=0;
             System.out.println("How many ({days} or {years}) would you like to go back?");
             days=userChoice.nextInt();
-          /*
-          PrecipitationVisual thing= new PrecipitationVisual();
-     thing.drawGraph(Temp.createTemp(amongus),days);
-      Theater.playScenes(thing);
-          */
-            //whatever(choice);
+            
             }
 
         
