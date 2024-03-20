@@ -31,11 +31,11 @@ setStrokeColor("red");
           drawLine((int)spacing, (400 - (int)data[i][1] * scale) - shift, (int)(spacing + space), (400 - (int)data[i + 1][1] * scale) - shift);
             spacing += space;
           */
-            setStrokeColor("red");
+          setStrokeColor("red");
           drawLine((int)spacing, (400 - (int)(Math.max(data[i][0],data[i][1])+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(Math.max(data[i+1][0],data[i+1][1])+0.5) * scale) - shift);
-       setStrokeColor("blue");
-            drawLine((int)spacing, (400 - (int)(Math.min(data[i][0],data[i][1])+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(Math.min(data[i+1][0],data[i+1][1])+0.5) * scale) - shift);
-            spacing += space;
+          setStrokeColor("blue");
+          drawLine((int)spacing, (400 - (int)(Math.min(data[i][0],data[i][1])+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(Math.min(data[i+1][0],data[i+1][1])+0.5) * scale) - shift);
+          spacing += space;
         }
       }
       setStrokeColor("black");

@@ -36,7 +36,7 @@ public class DataRunner {
          * however we need to decide what we are doing for the project.
          */
 
-        while(!(choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain") || choice.equalsIgnoreCase("rain"))){
+        while(!(choice.equals("rain") || choice.equals("rain") || choice.equals("rain"))){
 
           System.out.println("Please state which graph you would like to see: CO2, Rain, Temp"); 
           String choice = userChoice.nextLine();
@@ -49,25 +49,24 @@ public class DataRunner {
            * 
            */
 
-           if(choice.equalsIgnoreCase("CO2")){
+           if(choice.equals("CO2")){
             System.out.println("How many years would you like to go back?");
               userChoice.nextInt();
           }
 
     
-            else if(choice.equalsIgnoreCase("rain")){
+            else if(choice.equals("rain")){
                 System.out.println("How many days would you like to go back?");
                 userChoice.nextInt();
                 }
 
             
 
-            else if(choice.equalsIgnoreCase("temp")){
+            else if(choice.equals("temp")){
                 System.out.println("How many days would you like to go back?");
                 userChoice.nextInt();
                 }
         userChoice.close();
               }
         }
-
 }
