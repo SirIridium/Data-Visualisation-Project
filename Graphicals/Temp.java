@@ -39,12 +39,8 @@ public class Temp{
     public double getLowTemp(){
         return low; 
     }
-    public int getDay(){
-      return day; 
-    }
-
-
-    /* this converts the tempGraph created in the print Temps method
+    
+    /* this converts the teMpGraph created in the print Temps method
      * into a string which would make this a lot easier to print
      * bassically this is a support method
      */

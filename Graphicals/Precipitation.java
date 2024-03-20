@@ -5,44 +5,41 @@ Public class Precipitation{
     Get on it bozo
     */
     
-    private double rain;
-    private double snow;
-    public Precipitation(double rain, double snow){
-        this.rain = rain;
-        this.snow=snow;
+    private double wet;
+    private double dry;
+    public Precipitation(double wet, double dry){
+        this.wet = wet;
+        this.dry = dry;
   
       }
 
-      public static double[][] createPrecipitation(String rainFile, String snowFile){
-        double[] rain = FileReader.toDoubleArray(rainFile);
-        double[] snow = FileReader.toDoubleArray(snowFile);
-        double[][] dataSet = new double[rain.length][2]; 
+      public static double[][] createPrecipitation(String wetFile, String dryFile){
+        double[] wet = FileReader.toDoubleArray(wetFile);
+        double[] dry = FileReader.toDoubleArray(dryFile);
+        double[][] dataSet = new double[wet.length][2]; 
     
-        for(int i= 0;i<rain.length; i++){
-          dataSet[i][0]=rain[i];
-          dataSet[i][1]=snow[i];
+        for(int i= 0;i<wet.length; i++){
+          dataSet[i][0]=wet[i];
+          dataSet[i][1]=dry[i];
         }
       return dataSet;
 }
 
-public double getRain(){
-    return rain; 
+public double getWet(){
+    return wet; 
 }
-public double getSnow(){
-    return snow; 
-}
-public int getDay(){
-  return day; 
+public double getDry(){
+    return dry; 
 }
 
 
 
-public static String precipitationToString(double[][] rainGraph2){
+public static String precipitationToString(double[][] wetGraph2){
     String result = ""; 
-    for(int row = 0; row < rainGraph2.length; row++){
+    for(int row = 0; row < wetGraph2.length; row++){
       result += "Day " + (row+1) + " ";
         for(int col=0; col <= 1; col++){
-            result+= " | " + rainGraph2[row][col] +" | ";
+            result+= " | " + wetGraph2[row][col] +" | ";
         }
         result += "\n";
     }
