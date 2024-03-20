@@ -23,5 +23,12 @@ public class WaterVisual extends Scene{
       drawLine((int)spacing, (400 - (int)(dryData[i]+0.5) * scale) - shift, (int)(spacing + space), (400 - (int)(dryData[i+12]+0.5) * scale) - shift);
       spacing += space;
     }
+    String[] months= {"December","January","February","March","April","May","June","July","August","September","October","November","December"};
+    setTextColor("Black");
+    drawText("Wet/Dry % for 153yrs \n Month:" + months[month],10,350);
+    setTextColor("Red");
+    drawText("Red = Dry month",10,375);
+    setTextColor("Blue");
+    drawText("Blue=wet Month",200,375);
   }
 } 

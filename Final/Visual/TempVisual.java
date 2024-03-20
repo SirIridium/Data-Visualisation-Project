@@ -44,5 +44,6 @@ public class TempVisual extends Scene {
         spacing += space;
       }
     }
+    drawText("Temperature grpah \n Days : " + days,100,375);
   }
 }

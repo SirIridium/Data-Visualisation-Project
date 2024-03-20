@@ -38,5 +38,6 @@ public class CarbonVisual extends Scene{
         spacing += space;
       }
     }
+    drawText("CO2 Graph",150,350);
   } 
 }
