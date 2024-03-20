@@ -21,7 +21,7 @@ public class DataRunner {
      */
     if(choice.equals("CO2") || choice.equals("co2")){
       int days=0;
-      System.out.println("How many years would you like to go back?");
+      System.out.println("How many years would you like to go back? (85 max)");
       days=userChoice.nextInt();
       CarbonVisual thing= new CarbonVisual();
       thing.drawGraph(Carbon.createGreenhouse("megatons.txt"),days);
@@ -47,7 +47,7 @@ public class DataRunner {
      */
     if(choice.equals("Temp") || choice.equals("temp")){
       int days=0;
-      System.out.println("How many days would you like to go back?");
+      System.out.println("How many days would you like to go back? (316 max)");
       days=userChoice.nextInt();
       TempVisual thing= new TempVisual();
       thing.drawGraph(Temp.createTemp("tempHigh.txt","tempLow.txt"),days);
