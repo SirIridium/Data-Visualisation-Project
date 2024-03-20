@@ -1,3 +1,4 @@
+package Final.Visual; 
 import org.code.theater.*;
 import org.code.media.*;
 public class CarbonVisual extends Scene{

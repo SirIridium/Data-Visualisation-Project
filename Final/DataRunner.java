@@ -4,15 +4,6 @@ import org.code.theater.*;
 import java.util.Scanner;
 public class DataRunner {
     public static void main(String[] args){
-      
-      //  Temp[] temperatures = Temp.createTemp("tempHigh.txt","tempLow.txt");
-      
-        //we are doing the project on the tons of CO2 in the atmosphere per year over the past 100 year
-
-      
-      //  System.out.println(Temp.printTemps(temperatures));
-
-      
         Scanner userChoice = new Scanner(System.in);
          System.out.println("\n\n\nData Visusalisation project on climate change.\n\n\n");
         /* we are going to be using the user choice
@@ -24,27 +15,24 @@ public class DataRunner {
         String choice = userChoice.nextLine();
         
         
-        if(choice.equals("CO2")){
+        if(choice.equals("CO2") || choice.equals("co2")){
           int days=0;
-            System.out.println("How many or years would you like to go back?");
+            System.out.println("How many years would you like to go back?");
             days=userChoice.nextInt();
-          PrecipitationVisual thing= new PrecipitationVisual();
-     thing.drawGraph(FileReader.toDoubleArray("tons.txt"),days);
+          CarbonVisual thing= new CarbonVisual();
+     thing.drawGraph(Carbon.createGreenhouse("megatons.txt"),days);
       Theater.playScenes(thing);
-            //whatever(choice);
             }
 
         
 
-        if(choice.equals("Rain")){
-            int month=0;
+        if(choice.equals("Rain") || choice.equals("rain")){
+          int month=0;
             System.out.println("What month would you like to see?");
             month=userChoice.nextInt();
       WaterVisual thing= new WaterVisual();
-     thing.drawGraph(FileReader.toDoubleArray("wet.txt"),FileReader.toDoubleArray("dry.txt"),month);
+     thing.drawGraph(Precipitation.createWetPrecipitation("wet.txt"),Precipitation.createDryPrecipitation("dry.txt"),month);
       Theater.playScenes(thing);
-
-            
             }
 
         
@@ -56,8 +44,6 @@ public class DataRunner {
           TempVisual thing= new TempVisual();
      thing.drawGraph(Temp.createTemp("tempHigh.txt","tempLow.txt"),days);
       Theater.playScenes(thing);
-        //Where all the running will happen
-            //whatever(choice);
             }
 
         userChoice.close();
